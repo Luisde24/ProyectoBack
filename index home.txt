@@ -1,0 +1,125 @@
+comentarios del home index
+
+@*<div class="container-barra">
+        <nav class="nav-bar table-responsive">
+            <div class="nav-container roun">
+                <a id="nav-menu" class="nav-menu">&#9776; Men&uacute;</a>
+                <ul class="nav-list " id="nav">
+                    @if (User.IsInRole("Comercial") || User.IsInRole("Administrador"))
+                    {
+                        <li><a href="#" id="tile1" class="button" onclick="window.location.href='@Url.Action("Comercial", "Home")'"><img type="button" src="~/assets/COMERicono.png" width="100" /><font size=4><br /><b><br />Comercial</font></a></li>
+                    }
+                    else
+                    {
+                        <li><a href="#" id="tile1" class="button"><img type="button" src="~/assets/COMERicono.png" width="100" /><font size=4><br /><b><br />Comercial</font></a></li>
+                    }
+                    @if (User.IsInRole("Gestion Humana") || User.IsInRole("Administrador"))
+                    {
+                        <li> <a href="#" id="tile3" class="button" onclick="window.location.href='@Url.Action("RRHH", "Home")'"><img type="button" src="~/assets/GGHHicono-01.png" width="100" /><font size=4><br /><b><br />GGHH</font></a></li>
+                    }
+                    else
+                    {
+                        <li> <a href="#" id="tile3" class="button"><img type="button" src="~/assets/GGHHicono-01.png" width="100" /><font size=4><br /><b><br />GGHH</font></a></li>
+                    }
+                    @if (User.IsInRole("Administrador") || User.IsInRole("Administrador"))
+                    {
+                        <li> <a href="#" id="tile5" class="button"><img type="button" src="~/assets/SSTicon.png" width="100" title="PROXIMAMENTE" /> <font size=4><br /><b><br />SST</font></a></li>
+                    }
+                    else
+                    {
+                        <li> <a href="#" id="tile5" class="button"><img type="button" src="~/assets/SSTicon.png" width="100" title="PROXIMAMENTE" /> <font size=4><br /><b><br />SST</font></a></li>
+                    }
+                    @if (User.IsInRole("Logistica") || User.IsInRole("Administrador") || User.IsInRole("Indicadores"))
+                    {
+                        <li> <a href="#" id="tile6" class="button" onclick="window.location.href='@Url.Action("Logistica", "Home")'"><img type="button" src="~/assets/LOGISicon-01.png" width="100" /><font size=4><br /><b><br />Log&iacute;stica</b></font></a></li>
+                    }
+                    else
+                    {
+                        <li> <a href="#" id="tile6" class="button"><img type="button" src="~/assets/LOGISicon-01.png" width="100" /><font size=4><br /><b><br />Log&iacute;stica</b></font></a></li>
+                    }
+                    @if (User.IsInRole("Administrador"))
+                    {
+                        <li> <a href="#" id="tile7" class="button"><img type="button" src="~/assets/GERENicono-01.png" width="100" title="PROXIMAMENTE" /><font size=4><br /><b><br />Gerencial</font></a></li>
+                    }
+                    else
+                    {
+                        <li> <a href="#" id="tile7" class="button"><img type="button" src="~/assets/GERENicono-01.png" width="100" title="PROXIMAMENTE" /><font size=4><br /><b><br />Gerencial</font></a></li>
+                    }
+                    @if (User.IsInRole("Administrador") || User.IsInRole("Usuarios Web") || User.IsInRole("Auxiliares"))
+                    {
+                        <li> <a href="#" id="tile8" class="button" onclick="window.location.href='@Url.Action("Configuracion", "Home")'"><img type="button" src="~/assets/CONFIicon.png" width="100" /><font size=4><br /><b><br>Configuraci&oacute;n</b> </font></a></li>
+                    }
+                    else
+                    {
+                        <li> <a href="#" id="tile8" class="button"><img type="button" src="~/assets/CONFIicon.png" width="100" /><font size=4><br /><b><br>Configuraci&oacute;n</b> </font></a></li>
+                    }
+                </ul>
+            </div>
+        </nav>
+    </div>
+    <div class="hover">
+        <div class="alert">
+
+        </div>
+    </div>
+
+    <style>
+        #tile1 {
+            background: rgb(172,216,254);
+            background: linear-gradient(180deg, rgba(172,216,254,1) 50%, rgba(255,255,255,1) 100%) !important;
+        }
+
+        #tile3 {
+            background-color: rgb(211, 225, 229);
+            background: linear-gradient(180deg, rgba(211, 225, 229,1) 50%, rgba(255,255,255,1) 100%) !important;
+        }
+
+        #tile5 {
+            background: rgb(255,249,189);
+            background: linear-gradient(180deg, rgba(255,249,189,1) 50%, rgba(255,255,255,1) 100%) !important;
+        }
+
+        #tile6 {
+            background: rgb(255,193,198);
+            background: linear-gradient(180deg, rgba(255,193,198,1) 50%, rgba(255,255,255,1) 100%) !important;
+        }
+
+        #tile7 {
+            background: rgb(255, 224, 189);
+            background: linear-gradient(180deg, rgba(255, 224, 189,1) 50%, rgba(255,255,255,1) 100%) !important;
+        }
+
+        #tile8 {
+            background: rgb(189,246,250);
+            background: linear-gradient(180deg, rgba(189,246,250,1) 50%, rgba(255,255,255,1) 100%) !important;
+        }
+    </style>
+
+    <script>
+        $(document).ready(function () {
+            $('#nav-menu').click(function () {
+                $('ul.nav-list').addClass('open');
+                $('ul.nav-list').slideToggle('200');
+            });
+        });
+
+        $(function () {
+            $('[data-toggle="tooltip"]').tooltip()
+        })
+    </script>
+
+    <style>
+        .jumbotron-fluid {
+            background: rgba(255, 255, 255, 0.26);
+            height: 120%;
+            width: 100%;
+        }
+
+        .row {
+            opacity: 0.7;
+        }
+
+        #containerMenu {
+            height: 50vh;
+        }
+    </style>*@

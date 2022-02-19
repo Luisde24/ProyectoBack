@@ -1,0 +1,48 @@
+Pendientes
+
+Revisar el bton editar en Tipos de Medidas, por que no se visualiza el nombre. Debe mostrar el nombre 
+ 
+Tabla Auxilires no se visualiza tabla
+
+Pasar a DataTable 
+
+Plataforma 
+Empresa Transportadora 
+Tipo Detenimiento
+
+
+Por hacer
+
+
+Tabla Users 
+
+Edita los Usuarios 
+ver usuarios 
+
+Edita las plataformas
+ver plataformas 
+
+Agrega Rol
+Quita Roles 
+ver roles 
+
+resetea contraseña
+elimina usuario
+
+
+tabla plataforma 
+
+Edita usuarios  
+Ve usuarios  --ya esta 
+
+Selecciona Vehiculos  --Pendiente
+
+Selecciona  Tipos de medidas --Pendiente 
+
+ver plataforma --ya 
+editar plataforma
+Eliminar plataforma
+
+
+configuracionPlataforma 
+

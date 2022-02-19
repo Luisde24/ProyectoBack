@@ -1,0 +1,6 @@
+JSX --> Es javaScript con XML 
+Es la extensión de archivos que se usa en react
+ donde podemos hacer html dentro de js facilitando el uso sacando lo mejor de html css y js.
+
+pwd --> muestra la ubicacion actual
+

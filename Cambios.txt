@@ -1,0 +1,10 @@
+Cambios
+
+Tabla Tipo de Vehiculo
+
+Se cambia de manera de enviarle la tabla por medio del controlador y se parasa por medio de DataTable en api.
+
+Tabla Conductores
+
+
+Se cambia de manera de enviarle la tabla por medio del controlador y se parasa por medio de DataTable en api.
