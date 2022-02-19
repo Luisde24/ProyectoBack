@@ -7,4 +7,3 @@ Se cambia de manera de enviarle la tabla por medio del controlador y se parasa p
 Tabla Conductores
 
 
-Se cambia de manera de enviarle la tabla por medio del controlador y se parasa por medio de DataTable en api.
