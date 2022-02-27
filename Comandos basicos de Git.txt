@@ -1,0 +1,64 @@
+Comandos 
+pwd -> muestra donde estas ubicado
+ls --> Listas los archivos
+ls-al todos los archivos visibles y ocultos en una lista 
+ls -l todos los archivos visibles en una lista 
+clear --> limpiar consola
+cd /c -> entro al disco local C
+history --> muestra los comandos que has utilizado.
+rm NombreArchivo --> para borrar un archivo
+code --> abre visual studio code
+
+Configurar git para identificar nombre y correo
+git confing --list -> configuracion por defecto de git
+ git config --global user.name "Nombre de que maneja este git"
+git config --global user.email "Nombre de que maneja este git"
+
+
+
+Comados para Repositorio
+
+git init ->  se crea un area en memoria ram de git un espacio llamado staging y se crea un repositorio local con nombre master /.git
+git status -> muestra el estado de los archivos, la rama en la que estoy 
+git add NombreArchvo -> rastrea el archivo y agrega el archivo para poderle hacer commit 
+git add . -> agrega todos los arhivos para poderle hacer commit 
+git rm --cached -> elimina lo agregado en el git add
+git commit -m "Mensaje de ese cambio" -> el archivo que esta en staging se va a repositorio
+cat NombreArchivo -> muestra el contenido del archivo y si deseo cambiar voy al archivo y modifico
+ y le doy git add Nombre del archivo y le hago un nuevo commit
+git log NombreArchivo muestra la historia de cambio que ha tenido este archivo
+git diff "identificado del commit " "identificador del segundo commit" me compara lo sucedido entre dos commit.ç
+git reset "las letras de commit" --hard -> se vuelve a la version o lugar de ese commit borrando todo lo que hizo antes. 
+git checkout "identificador del Commit" NombreArchivo -> me devuelve al tiempo de los commit anteriores y siguientes
+git branch NombreRama -> crea una rama
+git checkout NombreRama -> se pasa a la rama que coloque
+git remote add origin NombreURlDeGitRemote 
+git remote -v -> muestra que tengo para hacer fest(traer) y push
+git pull origin NombreRama para bajar los cambios
+
+
+
+Hacer Push a repositorio remoto
+
+Para enviar informacion de un repositorio ya creado y conectado.
+git status para mirar los cambios 
+git add NombreArchivo o todos.
+git commit -m"Mensaje"
+git push origin NombreRama
+
+
+Hacer un merge 
+
+Despues de tener todos los cambios 
+
+Me ubico en la rama que voy a enviar la actualizacion 
+le doy el comando git checkout NombreDeRamaDondeTengoMiInfoActualizada 
+y despues le hago un git push para enviar la repositorio remoto. 
+
+
+
+
+
+
+
+

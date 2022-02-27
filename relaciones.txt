@@ -1,0 +1,71 @@
+function Edit(EmpreT) {
+                var urlString = "@Url.Action("Edit", "EmpresasTransportadoras", new {Area="Parametrizacion", id= "__id__" })";
+             window.location.href = urlString.replace('__id__', EmpreT);
+            }
+        function Details(EmpreT) {
+                var urlString = "@Url.Action("Details", "EmpresasTransportadoras", new {Area="Parametrizacion", id= "__id__" })";
+            window.location.href = urlString.replace('__id__', EmpreT);
+            }
+
+            function getToken() {
+                var token = '@Html.AntiForgeryToken()';
+                token = $(token).val();
+                return token;
+
+            }
+
+
+        $(document).ready(function () {
+
+            var string;
+                if ("@User.IsInRole("Administrador")" == "True") {
+                    string = '<a onclick="Edit(__Id__);" class="btn btn-outline-secondary roun  text-secondary btn-xs far fa-edit" data-toggle="tooltip" data-placement="top" title="Editar Empresa transportadora></a>' +
+                        '<a onclick="Details(__Id__);" class="btn btn-outline-secondary  roun btn-xs  text-secondary fas fa-eye" data-toggle="tooltip" data-placement="top" title = "Ver Empresa Transportadora" ></a >' +
+                        '<a onclick="modal(__Id__,' + "'" + '__Nombre__' + "'" + ');" class="btn btn-outline-secondary roun text-secondary btn-xs fas fa-trash" data-toggle="tooltip" data-placement="top" title="Eliminar Tipo Empresa transportadora"></a>';
+                } else {
+                    string = '<a onclick=Edit(__Id__); class="btn btn-warning roun btn-xs far fa-edit" data-toggle="tooltip" data-placement="top" title="Editar Empresa transportadora"></a>' +
+                        '<a onclick="Details(__Id__);" class="btn btn-dark  roun btn-xs fas fa-eye" data-toggle="tooltip" data-placement="top" title = "Ver Detalles Empresa transportadora" ></a >';
+                }
+
+                $('#tableShow').DataTable({
+                    procesing: true,
+                    severSide: true,
+                    bServerSide: true,
+                    stateSave: true,
+                    responsive: {
+                        details: false
+                    },
+                    scrollX: true,
+                    ajax: {
+                        "contentType": "application/json; charset=utf-8",
+                        "url": "/api/ApiEmpresaTransportadora",
+                        "type": "POST",
+                        "datatype": "json",
+                        "data": function (data) {
+                            
+                            return JSON.stringify(data);
+                        },
+                        headers: {
+                            'RequestVerificationToken': getToken()
+                        }
+                    }, columns: [
+                        { "data": "Nombre", "name": "Nombre", "autoWidth": true },
+                        {
+                            data: null,
+                            render: function (data, type, row) {
+                                return string.replaceAll("__Id__", row.Id).replace("__Nombre__", row.Nombre);
+                            },
+                            orderable: false
+                        },
+                      
+                        
+                    ],
+                    columnDefs: [{ aTargets: [0], sTitle: "Nombres", className: 'dt-head-left' },
+
+                    ],
+
+                    language:
+                    {
+                        "url": "@Url.Content("~/lib/datatables/js/LanguageDataTable.json")"
+                    }
+                });

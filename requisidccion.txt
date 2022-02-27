@@ -1,0 +1,13 @@
+WORKFLOWDEFINITION ---> 7 
+
+WORKFLOWEXCUTION --> 40
+
+Tareas Seguimiento a laq hoja de vida 
+
+--> Tarea hacer un boton de historia de requisiciones debe mostrar en cuantas requisiones ha estado, hasta donde llego y en que fecha 
+
+--> Crear un boton de editar Auxiliar 
+
+
+Boton esta en DetailsConsolidateModal.cshtml
+

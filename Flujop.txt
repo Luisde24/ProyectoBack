@@ -1,0 +1,9 @@
+katty maria acosta soto	1214746443 poceso-entrevista-toxicologia-validacion de antecedentes-entrevcista- prueba psicotecnica- prueba tecnica - examenes medicso
+
+
+Workflow requisiones 
+
+
+Asistente contable	17/01/2022	0/1	4	24/01/2022 (31 Dias de retraso)
+
+http://localhost:59102/stateMachine/WorkFlow/Designer/7  Flujo 
